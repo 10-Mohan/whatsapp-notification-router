@@ -319,12 +319,13 @@ def route_message(msg, context, audio_transcripts=None, image_ocr=None):
                 "evidence_message_ids": evidence_ids
             }
 
-    # Default Fallback
+    # Default Fallback - Safe catch-all for any unclassified or edge-case message
+    fallback_type = "unknown" if (conv_type == "business" or evidence_ids == "none") else "personal"
     return {
         "message_id": msg_id,
         "action": "digest",
-        "message_type": "personal" if conv_type in ["group", "personal"] else "unknown",
-        "reason": "The message is safe casual chat with no urgent action required.",
+        "message_type": fallback_type,
+        "reason": "Standard message evaluated with default safe non-interruptive routing.",
         "confidence": 0.80,
         "evidence_message_ids": evidence_ids
     }
