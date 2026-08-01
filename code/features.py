@@ -25,38 +25,30 @@ class ContextData:
             return list(reader)
 
     def _load_all(self):
-        # Users
         for row in self._read_csv('users.csv'):
             self.users[row['user_id']] = row
 
-        # Groups
         for row in self._read_csv('groups.csv'):
             self.groups[row['group_id']] = row
 
-        # Group Members
         for row in self._read_csv('group_members.csv'):
             key = (row['group_id'], row['user_id'])
             self.group_members[key] = row
 
-        # Business Accounts
         for row in self._read_csv('business_accounts.csv'):
             self.business_accounts[row['business_id']] = row
 
-        # User Business History
         for row in self._read_csv('user_business_history.csv'):
             key = (row['user_id'], row['business_id'])
             self.user_business_history[key] = row
 
-        # Message History
         for row in self._read_csv('message_history.csv'):
             self.message_history[row['message_id']] = row
 
-        # Message Events
         for row in self._read_csv('message_events.csv'):
             key = (row['user_id'], row['message_id'])
             self.message_events[key] = row
 
-        # Daily Notification Summary
         for row in self._read_csv('daily_notification_summary.csv'):
             self.daily_summary[(row['user_id'], row.get('date', ''))] = row
 
@@ -77,7 +69,7 @@ def is_in_dnd(created_at_str, dnd_window_str):
         
         if start_time <= end_time:
             return start_time <= msg_time <= end_time
-        else: # Spans midnight (e.g. 22:00-07:00)
+        else:
             return msg_time >= start_time or msg_time <= end_time
     except Exception:
         return False
@@ -87,12 +79,13 @@ def detect_prompt_injection(text):
     if not text:
         return False
     patterns = [
-        r"ignore all previous",
-        r"routing override",
-        r"set action=",
-        r"mark this message as",
-        r"system prompt:",
-        r"bypass rules"
+        r"ignore\s+(all\s+)?(previous|prior)\s+rules",
+        r"routing\s+override",
+        r"set\s+action\s*=",
+        r"mark\s+this\s+message\s+as",
+        r"system\s+prompt\s*:",
+        r"bypass\s+rules",
+        r"instruction\s*:\s*set"
     ]
     text_lower = text.lower()
     for p in patterns:
@@ -101,16 +94,51 @@ def detect_prompt_injection(text):
     return False
 
 
+def fuzzy_match_any(text, pattern_list):
+    """
+    Stem & regex pattern matcher to catch paraphrased variants of keyphrases.
+    """
+    if not text:
+        return False, None
+    text_lower = text.lower()
+    for pat in pattern_list:
+        if re.search(pat, text_lower):
+            return True, pat
+    return False, None
+
+
+def extract_message_entities(text):
+    """
+    Extracts dynamic entities (order numbers, time limits, amounts) to compose rich reasons.
+    """
+    entities = {}
+    if not text:
+        return entities
+        
+    order_match = re.search(r"order\s+(ending\s+)?#?(\d+)", text, re.IGNORECASE)
+    if order_match:
+        entities["order_id"] = order_match.group(2)
+        
+    time_match = re.search(r"(\d+\s*(mins|minutes|hours|pm|am|baje))", text, re.IGNORECASE)
+    if time_match:
+        entities["time_window"] = time_match.group(1)
+        
+    amount_match = re.search(r"(rs\.?\s*\d+(,\d+)*|\$\d+)", text, re.IGNORECASE)
+    if amount_match:
+        entities["amount"] = amount_match.group(1)
+        
+    return entities
+
+
 def detect_scam_or_phishing(text, business_info=None):
     if not text:
         text = ""
     text_lower = text.lower()
     
-    # Exclude legitimate safety advisories from verified businesses
-    if "safety advisory" in text_lower or "never ask for otp" in text_lower or "beware of fraud" in text_lower:
+    # Exclude legitimate safety advisories
+    if any(k in text_lower for k in ["safety advisory", "never ask for otp", "beware of fraud", "official reminder"]):
         return False, None
 
-    # Check domain mismatch or high report business
     if business_info:
         verified = business_info.get("verified", "1") == "1"
         off_domain = business_info.get("official_domain", "").strip().lower()
@@ -119,29 +147,27 @@ def detect_scam_or_phishing(text, business_info=None):
         user_reports = float(business_info.get("user_reports_30d", "0") or "0")
         
         if not verified and off_domain and sender_domain and off_domain != sender_domain:
-            return True, "unverified_domain_mismatch"
+            return True, f"domain mismatch ({sender_domain} vs {off_domain})"
         if sender_domain_age < 30:
-            return True, "recent_suspicious_domain"
+            return True, f"newly created domain ({sender_domain_age:.0f} days old)"
         if user_reports > 30:
-            return True, "high_business_reports"
+            return True, f"high community report rate ({user_reports:.0f} reports)"
             
-    scam_keywords = [
-        "otp", "verification code", "verify now", "account will be blocked",
-        "access will expire today", "enter code", "confirm password",
-        "penalty list", "scan this qr", "pay the clearance amount",
-        "reattempt fee", "wallet verification",
-        "login-code", "account-login", "security alert: otp"
+    scam_patterns = [
+        r"\botp\b", r"verification\s+code", r"verify\s+now", r"account\s+.*(block|suspend|expire)",
+        r"access\s+will\s+expire", r"confirm\s+password", r"scan\s+this\s+qr", r"pay\s+the\s+clearance",
+        r"reattempt\s+fee", r"wallet\s+verification", r"login-code", r"account-login", r"security\s+alert"
     ]
-    for kw in scam_keywords:
-        if kw in text_lower:
-            return True, f"suspicious_keyword_{kw}"
+    
+    matched, pat = fuzzy_match_any(text, scam_patterns)
+    if matched:
+        return True, f"phishing trigger ({pat})"
             
     return False, None
 
 
 def find_evidence_history(context, user_id, group_id, business_id, sender_user_id, message_text):
     matched_ids = []
-    # Search message history for exact/similar sender or topic matches for this user
     for msg_id, msg in context.message_history.items():
         if msg.get("user_id") == user_id:
             same_business = business_id and msg.get("business_id") == business_id
@@ -154,7 +180,5 @@ def find_evidence_history(context, user_id, group_id, business_id, sender_user_i
     if not matched_ids:
         return "none"
         
-    # Sort matched IDs to get most relevant historical evidence
     matched_ids.sort(key=lambda x: context.message_history[x].get("created_at", ""), reverse=True)
     return ";".join(matched_ids[:2])
-

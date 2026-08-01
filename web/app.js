@@ -8,7 +8,15 @@ const EMBEDDED_DATA = [
     "business_id": "business_002",
     "sender_user_id": "",
     "created_at": "2026-07-30 22:19",
-    "message_text": "Important Information\n\nDear Customer,\n\nYour latest account or card payment update is now available.\n\nPlease review the details and next steps in your banking app.\n\nTeam Banking Services",
+    "message_text": "Important Information
+
+Dear Customer,
+
+Your latest account or card payment update is now available.
+
+Please review the details and next steps in your banking app.
+
+Team Banking Services",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -176,7 +184,11 @@ const EMBEDDED_DATA = [
     "business_id": "business_061",
     "sender_user_id": "",
     "created_at": "2026-07-26 16:33",
-    "message_text": "Ride update\n\nYour pickup or route status has changed.\n\nPlease check the latest route, driver, and arrival details in the app.",
+    "message_text": "Ride update
+
+Your pickup or route status has changed.
+
+Please check the latest route, driver, and arrival details in the app.",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -380,7 +392,13 @@ const EMBEDDED_DATA = [
     "business_id": "business_001",
     "sender_user_id": "",
     "created_at": "2026-07-21 12:19",
-    "message_text": "Hi Customer,\n\nYour order ending 4821 has been packed and is expected to reach the local hub today.\n\nYou can check delivery details and delivery-code instructions in your Amazon app.\n\nTeam Amazon",
+    "message_text": "Hi Customer,
+
+Your order ending 4821 has been packed and is expected to reach the local hub today.
+
+You can check delivery details and delivery-code instructions in your Amazon app.
+
+Team Amazon",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -448,7 +466,11 @@ const EMBEDDED_DATA = [
     "business_id": "business_091",
     "sender_user_id": "",
     "created_at": "2026-07-28 06:51",
-    "message_text": "Dear Customer,\n\nNow that you have the Hoop Pain Relief Roll On, can you fill a quick review? How has your experience been using it: Good, Okayish or Bad?\n\nTap below to view details.",
+    "message_text": "Dear Customer,
+
+Now that you have the Hoop Pain Relief Roll On, can you fill a quick review? How has your experience been using it: Good, Okayish or Bad?
+
+Tap below to view details.",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -488,7 +510,11 @@ const EMBEDDED_DATA = [
     "business_id": "business_076",
     "sender_user_id": "",
     "created_at": "2026-07-28 20:13",
-    "message_text": "Dear Customer,\n\nYour monthly card statement is ready. Please review the amount due, reward points, and payment date in the official app whenever convenient.\n\nTap below to view details.",
+    "message_text": "Dear Customer,
+
+Your monthly card statement is ready. Please review the amount due, reward points, and payment date in the official app whenever convenient.
+
+Tap below to view details.",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -564,7 +590,13 @@ const EMBEDDED_DATA = [
     "business_id": "business_004",
     "sender_user_id": "",
     "created_at": "2026-07-23 14:26",
-    "message_text": "Dear Customer,\n\nYour health-related update is ready for review.\n\nPlease check appointment, prescription, claim, or pickup details in the registered app before the scheduled time.\n\nTeam Care Services",
+    "message_text": "Dear Customer,
+
+Your health-related update is ready for review.
+
+Please check appointment, prescription, claim, or pickup details in the registered app before the scheduled time.
+
+Team Care Services",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -676,7 +708,15 @@ const EMBEDDED_DATA = [
     "business_id": "business_064",
     "sender_user_id": "",
     "created_at": "2026-07-22 17:13",
-    "message_text": "Refund update\n\nDear Customer,\n\nYour food order refund could not be processed automatically.\n\nCheck the wallet details from the link shared here to release the amount today.\n\nReply STOP to opt out.",
+    "message_text": "Refund update
+
+Dear Customer,
+
+Your food order refund could not be processed automatically.
+
+Check the wallet details from the link shared here to release the amount today.
+
+Reply STOP to opt out.",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "2",
@@ -824,7 +864,13 @@ const EMBEDDED_DATA = [
     "business_id": "business_067",
     "sender_user_id": "",
     "created_at": "2026-07-30 12:33",
-    "message_text": "You just dropped something...\n\nA limited shopping benefit is available on items you recently viewed.\n\nCheck the details in the app before the offer expires.\n\nReply STOP to unsubscribe",
+    "message_text": "You just dropped something...
+
+A limited shopping benefit is available on items you recently viewed.
+
+Check the details in the app before the offer expires.
+
+Reply STOP to unsubscribe",
     "media_type": "image",
     "media_id": "img_010",
     "forwarded_count": "0",
@@ -940,7 +986,15 @@ const EMBEDDED_DATA = [
     "business_id": "business_094",
     "sender_user_id": "",
     "created_at": "2026-07-29 19:26",
-    "message_text": "New here? 50% Off Won't Wait!\n\nWelcome! Get 50% off with TRY50.\n\nBut hurry, it might expire soon.\n\nReady to place your first order? Use it now!\n\nT&C apply. Reply STOP to unsubscribe",
+    "message_text": "New here? 50% Off Won't Wait!
+
+Welcome! Get 50% off with TRY50.
+
+But hurry, it might expire soon.
+
+Ready to place your first order? Use it now!
+
+T&C apply. Reply STOP to unsubscribe",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -980,7 +1034,11 @@ const EMBEDDED_DATA = [
     "business_id": "business_012",
     "sender_user_id": "",
     "created_at": "2026-07-22 07:26",
-    "message_text": "Dear Customer,\n\nWelcome offer: get 40% off selected beauty and wellness products today. Tap below to shop the collection before the launch discount ends tonight.\n\nTap below to view details.",
+    "message_text": "Dear Customer,
+
+Welcome offer: get 40% off selected beauty and wellness products today. Tap below to shop the collection before the launch discount ends tonight.
+
+Tap below to view details.",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -1120,7 +1178,11 @@ const EMBEDDED_DATA = [
     "business_id": "business_096",
     "sender_user_id": "",
     "created_at": "2026-07-22 10:02",
-    "message_text": "Thank you for choosing PVR Cinemas,\n\nWe would love to hear about your experience with us.\n\nPlease click the link to give your valuable feedback.",
+    "message_text": "Thank you for choosing PVR Cinemas,
+
+We would love to hear about your experience with us.
+
+Please click the link to give your valuable feedback.",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -1480,7 +1542,15 @@ const EMBEDDED_DATA = [
     "business_id": "business_062",
     "sender_user_id": "",
     "created_at": "2026-07-26 13:56",
-    "message_text": "Important account notice\n\nDear Customer,\n\nWe noticed a security update pending on your banking profile.\n\nCheck the latest status at the link shared in this chat before access is restricted.\n\nReply STOP to opt out.",
+    "message_text": "Important account notice
+
+Dear Customer,
+
+We noticed a security update pending on your banking profile.
+
+Check the latest status at the link shared in this chat before access is restricted.
+
+Reply STOP to opt out.",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -1592,7 +1662,13 @@ const EMBEDDED_DATA = [
     "business_id": "business_092",
     "sender_user_id": "",
     "created_at": "2026-07-25 13:44",
-    "message_text": "When did a trip last change something about how you see yourself?\n\nLadakh is built for that. 7 nights, all in, from Rs 17,999 per person.\n\nTap below to view the itinerary.\n\nReply STOP to unsubscribe from marketing messages.",
+    "message_text": "When did a trip last change something about how you see yourself?
+
+Ladakh is built for that. 7 nights, all in, from Rs 17,999 per person.
+
+Tap below to view the itinerary.
+
+Reply STOP to unsubscribe from marketing messages.",
     "media_type": "image",
     "media_id": "img_003",
     "forwarded_count": "0",
@@ -1632,7 +1708,13 @@ const EMBEDDED_DATA = [
     "business_id": "business_032",
     "sender_user_id": "",
     "created_at": "2026-07-28 13:02",
-    "message_text": "Dear Customer,\n\nYour health-related update is ready for review.\n\nPlease check appointment, prescription, claim, or pickup details in the registered app before the scheduled time.\n\nTeam Care Services",
+    "message_text": "Dear Customer,
+
+Your health-related update is ready for review.
+
+Please check appointment, prescription, claim, or pickup details in the registered app before the scheduled time.
+
+Team Care Services",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -1924,7 +2006,13 @@ const EMBEDDED_DATA = [
     "business_id": "business_036",
     "sender_user_id": "",
     "created_at": "2026-07-31 11:38",
-    "message_text": "Delivery attempt could not be completed.\n\nA reattempt charge is pending for your parcel. Please complete verification at amazonpay-delivery.in before the package is returned tonight.\n\nTap below to continue.\n\nReply STOP to opt out.",
+    "message_text": "Delivery attempt could not be completed.
+
+A reattempt charge is pending for your parcel. Please complete verification at amazonpay-delivery.in before the package is returned tonight.
+
+Tap below to continue.
+
+Reply STOP to opt out.",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -2320,7 +2408,13 @@ const EMBEDDED_DATA = [
     "business_id": "business_092",
     "sender_user_id": "",
     "created_at": "2026-07-29 16:51",
-    "message_text": "The mountains are calling again.\n\nA saved travel deal is available for a limited time.\n\nCheck current fares, stays, and package details in the app.\n\nReply STOP to unsubscribe from marketing messages.",
+    "message_text": "The mountains are calling again.
+
+A saved travel deal is available for a limited time.
+
+Check current fares, stays, and package details in the app.
+
+Reply STOP to unsubscribe from marketing messages.",
     "media_type": "image",
     "media_id": "img_003",
     "forwarded_count": "0",
@@ -2676,7 +2770,13 @@ const EMBEDDED_DATA = [
     "business_id": "business_067",
     "sender_user_id": "",
     "created_at": "2026-07-22 14:38",
-    "message_text": "Reminder: your account has a shopping offer available.\n\nSelected products and saved items may have extra discounts today.\n\nTap below to view current balance or offer details.\n\nReply STOP to unsubscribe",
+    "message_text": "Reminder: your account has a shopping offer available.
+
+Selected products and saved items may have extra discounts today.
+
+Tap below to view current balance or offer details.
+
+Reply STOP to unsubscribe",
     "media_type": "image",
     "media_id": "img_010",
     "forwarded_count": "3",
@@ -2716,7 +2816,11 @@ const EMBEDDED_DATA = [
     "business_id": "business_060",
     "sender_user_id": "",
     "created_at": "2026-07-24 11:56",
-    "message_text": "Dear Customer,\n\nShopee return pickup today 2-5 PM. Keep item packed with accessories; share pickup code only after courier arrives.\n\nTap below to view details.",
+    "message_text": "Dear Customer,
+
+Shopee return pickup today 2-5 PM. Keep item packed with accessories; share pickup code only after courier arrives.
+
+Tap below to view details.",
     "media_type": "image",
     "media_id": "img_007",
     "forwarded_count": "0",
@@ -2792,7 +2896,13 @@ const EMBEDDED_DATA = [
     "business_id": "business_003",
     "sender_user_id": "",
     "created_at": "2026-07-30 15:07",
-    "message_text": "Reminder: your account has a shopping offer available.\n\nSelected products and saved items may have extra discounts today.\n\nTap below to view current balance or offer details.\n\nReply STOP to unsubscribe",
+    "message_text": "Reminder: your account has a shopping offer available.
+
+Selected products and saved items may have extra discounts today.
+
+Tap below to view current balance or offer details.
+
+Reply STOP to unsubscribe",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "3",
@@ -2960,7 +3070,13 @@ const EMBEDDED_DATA = [
     "business_id": "business_003",
     "sender_user_id": "",
     "created_at": "2026-07-22 07:26",
-    "message_text": "Reminder: your account has a shopping offer available.\n\nSelected products and saved items may have extra discounts today.\n\nTap below to view current balance or offer details.\n\nReply STOP to unsubscribe",
+    "message_text": "Reminder: your account has a shopping offer available.
+
+Selected products and saved items may have extra discounts today.
+
+Tap below to view current balance or offer details.
+
+Reply STOP to unsubscribe",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "3",
@@ -3036,7 +3152,13 @@ const EMBEDDED_DATA = [
     "business_id": "business_097",
     "sender_user_id": "",
     "created_at": "2026-07-28 16:38",
-    "message_text": "Dear customer,\n\nYour international payout profile needs one final verification step.\n\nComplete the check from the link shared here so the payout request can continue.\n\nTeam RazorpayX Global Desk",
+    "message_text": "Dear customer,
+
+Your international payout profile needs one final verification step.
+
+Complete the check from the link shared here so the payout request can continue.
+
+Team RazorpayX Global Desk",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "2",
@@ -3076,7 +3198,15 @@ const EMBEDDED_DATA = [
     "business_id": "business_064",
     "sender_user_id": "",
     "created_at": "2026-07-20 19:38",
-    "message_text": "Refund update\n\nDear Customer,\n\nYour food order refund could not be processed automatically.\n\nCheck the wallet details from the link shared here to release the amount today.\n\nReply STOP to opt out.",
+    "message_text": "Refund update
+
+Dear Customer,
+
+Your food order refund could not be processed automatically.
+
+Check the wallet details from the link shared here to release the amount today.
+
+Reply STOP to opt out.",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "2",
@@ -3216,7 +3346,11 @@ const EMBEDDED_DATA = [
     "business_id": "business_070",
     "sender_user_id": "",
     "created_at": "2026-07-30 22:19",
-    "message_text": "Dear Customer,\n\nYour FedEx delivery attempt is scheduled between 2 PM and 4 PM today. Please keep an ID ready; no payment or OTP is required for this delivery.\n\nTap below to view details.",
+    "message_text": "Dear Customer,
+
+Your FedEx delivery attempt is scheduled between 2 PM and 4 PM today. Please keep an ID ready; no payment or OTP is required for this delivery.
+
+Tap below to view details.",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -3292,7 +3426,15 @@ const EMBEDDED_DATA = [
     "business_id": "business_093",
     "sender_user_id": "",
     "created_at": "2026-07-24 14:33",
-    "message_text": "Dear customer,\n\nInternational payouts don't have to be slow, expensive, or stressful.\n\nRazorpayX Global Payouts helps simplify vendor payouts across markets.\n\nLet's connect if any of the pain points resonate.\n\nTeam RazorpayX",
+    "message_text": "Dear customer,
+
+International payouts don't have to be slow, expensive, or stressful.
+
+RazorpayX Global Payouts helps simplify vendor payouts across markets.
+
+Let's connect if any of the pain points resonate.
+
+Team RazorpayX",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -3360,7 +3502,13 @@ const EMBEDDED_DATA = [
     "business_id": "business_095",
     "sender_user_id": "",
     "created_at": "2026-07-25 10:07",
-    "message_text": "Hi,\n\nYou may have interacted with this program through one of our events, hiring conversations, partnerships, or other initiatives.\n\nWe're conducting a short 3-minute survey or session update to better understand what today's tech industry expects.\n\nHere's the link shared in this chat. We'd really appreciate it if you could take a few minutes.",
+    "message_text": "Hi,
+
+You may have interacted with this program through one of our events, hiring conversations, partnerships, or other initiatives.
+
+We're conducting a short 3-minute survey or session update to better understand what today's tech industry expects.
+
+Here's the link shared in this chat. We'd really appreciate it if you could take a few minutes.",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -3836,7 +3984,13 @@ const EMBEDDED_DATA = [
     "business_id": "business_001",
     "sender_user_id": "",
     "created_at": "2026-07-27 09:33",
-    "message_text": "Hi Customer,\n\nYour order ending 4821 has been packed and is expected to reach the local hub today.\n\nYou can check delivery details and delivery-code instructions in your Amazon app.\n\nTeam Amazon",
+    "message_text": "Hi Customer,
+
+Your order ending 4821 has been packed and is expected to reach the local hub today.
+
+You can check delivery details and delivery-code instructions in your Amazon app.
+
+Team Amazon",
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
@@ -4007,6 +4161,24 @@ async function loadData() {
     renderThreats();
 }
 
+// Animated Counter Utility
+function animateCounter(elementId, targetValue, duration = 1000) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    let start = 0;
+    const increment = targetValue / (duration / 16);
+    function update() {
+        start += increment;
+        if (start >= targetValue) {
+            el.textContent = targetValue;
+        } else {
+            el.textContent = Math.floor(start);
+            requestAnimationFrame(update);
+        }
+    }
+    requestAnimationFrame(update);
+}
+
 // Render Dashboard
 function renderDashboard() {
     let notifyCount = 0, digestCount = 0, muteCount = 0, threatCount = 0;
@@ -4022,10 +4194,10 @@ function renderDashboard() {
         typeCounts[item.message_type] = (typeCounts[item.message_type] || 0) + 1;
     });
 
-    const nEl = document.getElementById('stat-notify'); if (nEl) nEl.textContent = notifyCount;
-    const dEl = document.getElementById('stat-digest'); if (dEl) dEl.textContent = digestCount;
-    const mEl = document.getElementById('stat-mute'); if (mEl) mEl.textContent = muteCount;
-    const tEl = document.getElementById('stat-threats'); if (tEl) tEl.textContent = threatCount;
+    animateCounter('stat-notify', notifyCount);
+    animateCounter('stat-digest', digestCount);
+    animateCounter('stat-mute', muteCount);
+    animateCounter('stat-threats', threatCount);
 
     // Render category grid
     const catGrid = document.getElementById('category-grid');
@@ -4070,8 +4242,9 @@ function renderTable(data) {
     if (!tbody) return;
     tbody.innerHTML = '';
 
-    data.forEach(item => {
+    data.forEach((item, index) => {
         const tr = document.createElement('tr');
+        tr.style.setProperty('--row-index', index);
         const textDisplay = item.message_text ? item.message_text.substring(0, 70) + (item.message_text.length > 70 ? '...' : '') : `(${item.media_type} note)`;
 
         tr.innerHTML = `

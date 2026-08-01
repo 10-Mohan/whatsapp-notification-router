@@ -13,7 +13,7 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "business_update",
-    "reason": "A verified business is sending a legitimate but non-urgent update.",
+    "reason": "Non-urgent account update from verified sender HDFC Bank.",
     "confidence": "0.78",
     "evidence_message_ids": "message_0243;message_0102",
     "user_info": {
@@ -81,8 +81,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The sender is trusted, but the message has no urgent action or safety relevance.",
-    "confidence": "0.80",
+    "reason": "Casual personal message from contact without urgent action requirement.",
+    "confidence": "0.8",
     "evidence_message_ids": "none",
     "user_info": {
       "user_id": "u_034",
@@ -145,7 +145,7 @@
     "forwarded_count": "7",
     "action": "mute",
     "message_type": "greeting",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (7 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0136;message_0135",
     "user_info": {
@@ -181,7 +181,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "business_update",
-    "reason": "A verified business is sending an update that matches the user's recent order history.",
+    "reason": "Verified operational update from Grab matching active orders.",
     "confidence": "0.91",
     "evidence_message_ids": "message_0206;message_0205",
     "user_info": {
@@ -221,8 +221,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Myntra Marketplace evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0390;message_0332",
     "user_info": {
       "user_id": "u_032",
@@ -257,8 +257,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The sender is trusted, but the message has no urgent action or safety relevance.",
-    "confidence": "0.80",
+    "reason": "Casual personal message from contact without urgent action requirement.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0115;message_0232",
     "user_info": {
       "user_id": "u_033",
@@ -285,7 +285,7 @@
     "forwarded_count": "11",
     "action": "mute",
     "message_type": "greeting",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (11 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0194;message_0193",
     "user_info": {
@@ -349,7 +349,7 @@
     "forwarded_count": "0",
     "action": "mute",
     "message_type": "scam",
-    "reason": "The message asks for urgent OTP or account verification through a suspicious flow.",
+    "reason": "Suspicious message requesting sensitive verification details (phishing trigger (\\botp\\b)).",
     "confidence": "0.87",
     "evidence_message_ids": "message_0214;message_0173",
     "user_info": {
@@ -385,7 +385,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "business_update",
-    "reason": "A verified business is sending an update that matches the user's recent order history.",
+    "reason": "Verified operational update from Amazon India (Order #4821) matching active orders.",
     "confidence": "0.91",
     "evidence_message_ids": "message_0031;message_0267",
     "user_info": {
@@ -425,8 +425,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The sender is trusted, but the message has no urgent action or safety relevance.",
-    "confidence": "0.80",
+    "reason": "Casual personal message from contact without urgent action requirement.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0055;message_0249",
     "user_info": {
       "user_id": "u_004",
@@ -453,7 +453,7 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "business_update",
-    "reason": "A verified business is sending a legitimate but non-urgent update.",
+    "reason": "Non-urgent account update from verified sender Hoop.",
     "confidence": "0.78",
     "evidence_message_ids": "message_0072;message_0071",
     "user_info": {
@@ -493,7 +493,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "payment",
-    "reason": "A payment reminder or billing statement from a trusted contact or business.",
+    "reason": "Official payment reminder from American Express requiring action.",
     "confidence": "0.89",
     "evidence_message_ids": "none",
     "user_info": {
@@ -533,7 +533,7 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "event",
-    "reason": "The message is useful group information, but it is not urgent enough to interrupt the user.",
+    "reason": "Non-urgent group operational information in University of Toronto Faculty Advising.",
     "confidence": "0.84",
     "evidence_message_ids": "message_0176;message_0404",
     "user_info": {
@@ -569,7 +569,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "event",
-    "reason": "A verified business is sending a reminder that matches the user's recent booking history.",
+    "reason": "Appointment reminder from Apollo 24|7 matching recent user bookings.",
     "confidence": "0.91",
     "evidence_message_ids": "message_0245;message_0064",
     "user_info": {
@@ -609,7 +609,7 @@
     "forwarded_count": "3",
     "action": "mute",
     "message_type": "promotion",
-    "reason": "Similar historical messages were ignored, dismissed, or muted by this user.",
+    "reason": "Marketplace listing in Myntra Marketplace matching user's dismissal pattern.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0115;message_0232",
     "user_info": {
@@ -645,8 +645,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Maple Heights Residents evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0146;message_0145",
     "user_info": {
       "user_id": "u_010",
@@ -681,7 +681,7 @@
     "forwarded_count": "2",
     "action": "mute",
     "message_type": "scam",
-    "reason": "This sender account shows high risk indicators or unverified domain discrepancy.",
+    "reason": "Talabat Refund Desk sender shows security risk indicators (domain mismatch (talabat-refund.com vs talabat.com)).",
     "confidence": "0.87",
     "evidence_message_ids": "message_0208;message_0207",
     "user_info": {
@@ -721,8 +721,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Match Night Crew evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0074;message_0073",
     "user_info": {
       "user_id": "u_008",
@@ -757,8 +757,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Extended Family evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0197;message_0198",
     "user_info": {
       "user_id": "u_012",
@@ -829,7 +829,7 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "promotion",
-    "reason": "The message is promotional but matches a topic or business the user has opted into.",
+    "reason": "Promotional update from Target matching user's active relationship.",
     "confidence": "0.78",
     "evidence_message_ids": "message_0186;message_0185",
     "user_info": {
@@ -869,7 +869,7 @@
     "forwarded_count": "10",
     "action": "mute",
     "message_type": "forward",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (10 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0131;message_0132",
     "user_info": {
@@ -905,7 +905,7 @@
     "forwarded_count": "0",
     "action": "mute",
     "message_type": "spam",
-    "reason": "The user has opted out of or repeatedly dismissed similar marketing messages.",
+    "reason": "Unsolicited audio marketing from Thrillophilia matching user's dismissal patterns.",
     "confidence": "0.81",
     "evidence_message_ids": "message_0222",
     "user_info": {
@@ -945,7 +945,7 @@
     "forwarded_count": "0",
     "action": "mute",
     "message_type": "promotion",
-    "reason": "The user has opted out of or repeatedly dismissed similar marketing messages.",
+    "reason": "Marketing offer from Swish which the user has opted out of or dismissed.",
     "confidence": "0.81",
     "evidence_message_ids": "message_0017;message_0084",
     "user_info": {
@@ -985,7 +985,7 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "promotion",
-    "reason": "The message is promotional but matches a topic or business the user has opted into.",
+    "reason": "Promotional update from Nykaa matching user's active relationship.",
     "confidence": "0.78",
     "evidence_message_ids": "none",
     "user_info": {
@@ -1025,7 +1025,7 @@
     "forwarded_count": "8",
     "action": "mute",
     "message_type": "forward",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (8 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0390;message_0332",
     "user_info": {
@@ -1061,7 +1061,7 @@
     "forwarded_count": "7",
     "action": "mute",
     "message_type": "forward",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (7 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0233;message_0373",
     "user_info": {
@@ -1089,7 +1089,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "personal",
-    "reason": "The sender directly asks this user for a response or action.",
+    "reason": "Direct mention @u_010 in Checkout Platform Co-workers requesting response.",
     "confidence": "0.87",
     "evidence_message_ids": "message_0371;message_0230",
     "user_info": {
@@ -1125,7 +1125,7 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "business_update",
-    "reason": "A verified business is sending a legitimate but non-urgent update.",
+    "reason": "Non-urgent account update from verified sender PVRINOX Cinemas.",
     "confidence": "0.78",
     "evidence_message_ids": "message_0011;message_0242",
     "user_info": {
@@ -1165,7 +1165,7 @@
     "forwarded_count": "10",
     "action": "mute",
     "message_type": "forward",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (10 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0212;message_0211",
     "user_info": {
@@ -1201,8 +1201,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in University of Toronto Faculty Advising evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0082;message_0081",
     "user_info": {
       "user_id": "u_035",
@@ -1237,7 +1237,7 @@
     "forwarded_count": "9",
     "action": "mute",
     "message_type": "forward",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (9 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0092;message_0091",
     "user_info": {
@@ -1273,7 +1273,7 @@
     "forwarded_count": "2",
     "action": "mute",
     "message_type": "scam",
-    "reason": "The message asks for urgent OTP or account verification through a suspicious flow.",
+    "reason": "Suspicious message requesting sensitive verification details (phishing trigger (\\botp\\b)).",
     "confidence": "0.87",
     "evidence_message_ids": "message_0036;message_0144",
     "user_info": {
@@ -1309,8 +1309,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in University of Toronto Student Chat evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0374;message_0285",
     "user_info": {
       "user_id": "u_016",
@@ -1345,8 +1345,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The sender is trusted, but the message has no urgent action or safety relevance.",
-    "confidence": "0.80",
+    "reason": "Casual personal message from contact without urgent action requirement.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0234;message_0377",
     "user_info": {
       "user_id": "u_019",
@@ -1373,8 +1373,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Green Acres Society Notices evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0410;message_0130",
     "user_info": {
       "user_id": "u_011",
@@ -1409,7 +1409,7 @@
     "forwarded_count": "0",
     "action": "mute",
     "message_type": "scam",
-    "reason": "This message presents suspicious financial or verification risk.",
+    "reason": "Suspicious security risk payload intercepted (phishing trigger (scan\\s+this\\s+qr)).",
     "confidence": "0.87",
     "evidence_message_ids": "message_0152;message_0151",
     "user_info": {
@@ -1485,7 +1485,7 @@
     "forwarded_count": "0",
     "action": "mute",
     "message_type": "scam",
-    "reason": "This sender account shows high risk indicators or unverified domain discrepancy.",
+    "reason": "Chase Security Center sender shows security risk indicators (domain mismatch (chase-secure-alert.com vs chase.com)).",
     "confidence": "0.87",
     "evidence_message_ids": "message_0094;message_0093",
     "user_info": {
@@ -1525,8 +1525,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Myntra Marketplace evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0115;message_0232",
     "user_info": {
       "user_id": "u_033",
@@ -1561,8 +1561,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Mehra Family evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0054;message_0226",
     "user_info": {
       "user_id": "u_001",
@@ -1597,7 +1597,7 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "promotion",
-    "reason": "The message is promotional but matches a topic or business the user has opted into.",
+    "reason": "Promotional update from Thrillophilia matching user's active relationship.",
     "confidence": "0.78",
     "evidence_message_ids": "message_0272;message_0109",
     "user_info": {
@@ -1637,7 +1637,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "event",
-    "reason": "A verified business is sending a reminder that matches the user's recent booking history.",
+    "reason": "Appointment reminder from Green Cross Pharmacy matching recent user bookings.",
     "confidence": "0.91",
     "evidence_message_ids": "message_0156;message_0155",
     "user_info": {
@@ -1677,8 +1677,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Checkout Platform Co-workers evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0219",
     "user_info": {
       "user_id": "u_029",
@@ -1713,8 +1713,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Local Food Finds evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0182;message_0181",
     "user_info": {
       "user_id": "u_006",
@@ -1749,7 +1749,7 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "greeting",
-    "reason": "The message is a harmless greeting that can be read later.",
+    "reason": "Harmless group greeting in Cousins and Family Chat.",
     "confidence": "0.82",
     "evidence_message_ids": "message_0409;message_0280",
     "user_info": {
@@ -1785,7 +1785,7 @@
     "forwarded_count": "8",
     "action": "mute",
     "message_type": "greeting",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (8 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0194;message_0193",
     "user_info": {
@@ -1821,8 +1821,8 @@
     "forwarded_count": "2",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Myntra Marketplace evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0095;message_0096",
     "user_info": {
       "user_id": "u_032",
@@ -1857,8 +1857,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Myntra Marketplace evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0090;message_0089",
     "user_info": {
       "user_id": "u_027",
@@ -1893,7 +1893,7 @@
     "forwarded_count": "10",
     "action": "mute",
     "message_type": "forward",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (10 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0078;message_0077",
     "user_info": {
@@ -1929,7 +1929,7 @@
     "forwarded_count": "0",
     "action": "mute",
     "message_type": "scam",
-    "reason": "This sender account shows high risk indicators or unverified domain discrepancy.",
+    "reason": "Amazon Delivery Support sender shows security risk indicators (domain mismatch (amazonpay-delivery.in vs amazon.in)).",
     "confidence": "0.87",
     "evidence_message_ids": "message_0032;message_0108",
     "user_info": {
@@ -1969,8 +1969,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Society Maintenance Desk evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0410;message_0130",
     "user_info": {
       "user_id": "u_011",
@@ -2005,7 +2005,7 @@
     "forwarded_count": "0",
     "action": "mute",
     "message_type": "scam",
-    "reason": "The message asks for urgent OTP or account verification through a suspicious flow.",
+    "reason": "Suspicious message requesting sensitive verification details (phishing trigger (\\botp\\b)).",
     "confidence": "0.87",
     "evidence_message_ids": "message_0148;message_0147",
     "user_info": {
@@ -2039,10 +2039,10 @@
     "media_type": "",
     "media_id": "",
     "forwarded_count": "0",
-    "action": "digest",
-    "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "action": "mute",
+    "message_type": "scam",
+    "reason": "Suspicious security risk payload intercepted (phishing trigger (security\\s+alert)).",
+    "confidence": "0.87",
     "evidence_message_ids": "message_0057;message_0240",
     "user_info": {
       "user_id": "u_001",
@@ -2077,7 +2077,7 @@
     "forwarded_count": "0",
     "action": "mute",
     "message_type": "scam",
-    "reason": "The message asks for urgent OTP or account verification through a suspicious flow.",
+    "reason": "Suspicious message requesting sensitive verification details (phishing trigger (\\botp\\b)).",
     "confidence": "0.87",
     "evidence_message_ids": "message_0214;message_0173",
     "user_info": {
@@ -2113,8 +2113,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The sender is trusted, but the message has no urgent action or safety relevance.",
-    "confidence": "0.80",
+    "reason": "Casual personal message from contact without urgent action requirement.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0054;message_0226",
     "user_info": {
       "user_id": "u_001",
@@ -2141,8 +2141,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Green Acres Society Notices evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0410;message_0130",
     "user_info": {
       "user_id": "u_011",
@@ -2177,7 +2177,7 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "event",
-    "reason": "The message is useful group information, but it is not urgent enough to interrupt the user.",
+    "reason": "Non-urgent group operational information in Maple Heights Residents.",
     "confidence": "0.84",
     "evidence_message_ids": "message_0070;message_0069",
     "user_info": {
@@ -2213,7 +2213,7 @@
     "forwarded_count": "0",
     "action": "mute",
     "message_type": "scam",
-    "reason": "This sender account shows high risk indicators or unverified domain discrepancy.",
+    "reason": "HDFC Bank Helpdesk sender shows security risk indicators (domain mismatch (hdfcbank-kyc.in vs hdfc.bank.in)).",
     "confidence": "0.87",
     "evidence_message_ids": "message_0221",
     "user_info": {
@@ -2253,7 +2253,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "urgent",
-    "reason": "A trusted group admin sent a time-sensitive update that should interrupt the user.",
+    "reason": "Time-sensitive facility alert from Green Acres Society Notices admin (20 mins).",
     "confidence": "0.89",
     "evidence_message_ids": "message_0057;message_0240",
     "user_info": {
@@ -2289,7 +2289,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "payment",
-    "reason": "A payment reminder or billing statement from a trusted contact or business.",
+    "reason": "Official payment reminder from Admin in Green Acres Society Notices (Deadline: 5 PM) requiring action.",
     "confidence": "0.89",
     "evidence_message_ids": "message_0410;message_0130",
     "user_info": {
@@ -2325,7 +2325,7 @@
     "forwarded_count": "0",
     "action": "mute",
     "message_type": "promotion",
-    "reason": "The user has opted out of or repeatedly dismissed similar marketing messages.",
+    "reason": "Marketing offer from Thrillophilia which the user has opted out of or dismissed.",
     "confidence": "0.81",
     "evidence_message_ids": "message_0034;message_0112",
     "user_info": {
@@ -2365,7 +2365,7 @@
     "forwarded_count": "9",
     "action": "mute",
     "message_type": "forward",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (9 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0194;message_0193",
     "user_info": {
@@ -2401,8 +2401,8 @@
     "forwarded_count": "2",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Myntra Marketplace evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0087;message_0184",
     "user_info": {
       "user_id": "u_005",
@@ -2437,8 +2437,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The sender is trusted, but the message has no urgent action or safety relevance.",
-    "confidence": "0.80",
+    "reason": "Casual personal message from contact without urgent action requirement.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0390;message_0332",
     "user_info": {
       "user_id": "u_032",
@@ -2465,8 +2465,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Checkout Platform Co-workers evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0055;message_0249",
     "user_info": {
       "user_id": "u_004",
@@ -2501,7 +2501,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "urgent",
-    "reason": "The message is from a work context and contains a direct deadline or meeting dependency.",
+    "reason": "Urgent workplace dependency in Checkout Platform Co-workers requiring immediate attention.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0371;message_0230",
     "user_info": {
@@ -2537,8 +2537,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Land and Plot Leads evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0391;message_0389",
     "user_info": {
       "user_id": "u_040",
@@ -2573,7 +2573,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "payment",
-    "reason": "A payment reminder or billing statement from a trusted contact or business.",
+    "reason": "Official payment reminder from Admin in Green Acres Society Notices (Deadline: 5 baje) requiring action.",
     "confidence": "0.89",
     "evidence_message_ids": "message_0410;message_0130",
     "user_info": {
@@ -2609,7 +2609,7 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "payment",
-    "reason": "A payment reminder or billing statement from a trusted contact or business.",
+    "reason": "Legitimate statement or payment summary from Admin in International School Parents Group.",
     "confidence": "0.82",
     "evidence_message_ids": "message_0255;message_0037",
     "user_info": {
@@ -2645,8 +2645,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Checkout Platform Co-workers evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0380;message_0218",
     "user_info": {
       "user_id": "u_028",
@@ -2681,7 +2681,7 @@
     "forwarded_count": "3",
     "action": "mute",
     "message_type": "promotion",
-    "reason": "The user has opted out of or repeatedly dismissed similar marketing messages.",
+    "reason": "Marketing offer from Target which the user has opted out of or dismissed.",
     "confidence": "0.81",
     "evidence_message_ids": "message_0188;message_0187",
     "user_info": {
@@ -2721,7 +2721,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "business_update",
-    "reason": "A verified business is sending an update that matches the user's recent order history.",
+    "reason": "Verified operational update from Shopee matching active orders.",
     "confidence": "0.91",
     "evidence_message_ids": "message_0153;message_0291",
     "user_info": {
@@ -2761,7 +2761,7 @@
     "forwarded_count": "0",
     "action": "mute",
     "message_type": "scam",
-    "reason": "The message asks for urgent OTP or account verification through a suspicious flow.",
+    "reason": "Suspicious message requesting sensitive verification details (phishing trigger (\\botp\\b)).",
     "confidence": "0.87",
     "evidence_message_ids": "message_0086;message_0085",
     "user_info": {
@@ -2797,7 +2797,7 @@
     "forwarded_count": "3",
     "action": "mute",
     "message_type": "promotion",
-    "reason": "The user has opted out of or repeatedly dismissed similar marketing messages.",
+    "reason": "Marketing offer from Flipkart which the user has opted out of or dismissed.",
     "confidence": "0.81",
     "evidence_message_ids": "message_0104;message_0103",
     "user_info": {
@@ -2837,8 +2837,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The sender is trusted, but the message has no urgent action or safety relevance.",
-    "confidence": "0.80",
+    "reason": "Direct message from trusted contact specifying no immediate urgency.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0054;message_0226",
     "user_info": {
       "user_id": "u_001",
@@ -2865,8 +2865,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The sender is trusted, but the message has no urgent action or safety relevance.",
-    "confidence": "0.80",
+    "reason": "Casual personal message from contact without urgent action requirement.",
+    "confidence": "0.8",
     "evidence_message_ids": "none",
     "user_info": {
       "user_id": "u_021",
@@ -2893,7 +2893,7 @@
     "forwarded_count": "6",
     "action": "mute",
     "message_type": "forward",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (6 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0411;message_0253",
     "user_info": {
@@ -2929,8 +2929,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Myntra Marketplace evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0214;message_0173",
     "user_info": {
       "user_id": "u_009",
@@ -2965,7 +2965,7 @@
     "forwarded_count": "3",
     "action": "mute",
     "message_type": "promotion",
-    "reason": "The user has opted out of or repeatedly dismissed similar marketing messages.",
+    "reason": "Marketing offer from Flipkart which the user has opted out of or dismissed.",
     "confidence": "0.81",
     "evidence_message_ids": "message_0104;message_0103",
     "user_info": {
@@ -3005,7 +3005,7 @@
     "forwarded_count": "2",
     "action": "mute",
     "message_type": "scam",
-    "reason": "The message asks for urgent OTP or account verification through a suspicious flow.",
+    "reason": "Suspicious message requesting sensitive verification details (phishing trigger (\\botp\\b)).",
     "confidence": "0.87",
     "evidence_message_ids": "message_0086;message_0085",
     "user_info": {
@@ -3041,7 +3041,7 @@
     "forwarded_count": "2",
     "action": "mute",
     "message_type": "scam",
-    "reason": "This sender account shows high risk indicators or unverified domain discrepancy.",
+    "reason": "RazorpayX Global Desk sender shows security risk indicators (domain mismatch (razorpayx-payouts.com vs razorpayx.com)).",
     "confidence": "0.87",
     "evidence_message_ids": "message_0128;message_0127",
     "user_info": {
@@ -3081,7 +3081,7 @@
     "forwarded_count": "2",
     "action": "mute",
     "message_type": "scam",
-    "reason": "This sender account shows high risk indicators or unverified domain discrepancy.",
+    "reason": "Talabat Refund Desk sender shows security risk indicators (domain mismatch (talabat-refund.com vs talabat.com)).",
     "confidence": "0.87",
     "evidence_message_ids": "message_0208;message_0207",
     "user_info": {
@@ -3121,8 +3121,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Extended Family evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0387;message_0166",
     "user_info": {
       "user_id": "u_037",
@@ -3157,8 +3157,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The sender is trusted, but the message has no urgent action or safety relevance.",
-    "confidence": "0.80",
+    "reason": "Casual personal message from contact without urgent action requirement.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0371;message_0230",
     "user_info": {
       "user_id": "u_010",
@@ -3185,8 +3185,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Green Acres Society Notices evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0410;message_0130",
     "user_info": {
       "user_id": "u_011",
@@ -3221,7 +3221,7 @@
     "forwarded_count": "0",
     "action": "mute",
     "message_type": "scam",
-    "reason": "The message asks for urgent OTP or account verification through a suspicious flow.",
+    "reason": "Suspicious message requesting sensitive verification details (phishing trigger (\\botp\\b)).",
     "confidence": "0.87",
     "evidence_message_ids": "none",
     "user_info": {
@@ -3261,7 +3261,7 @@
     "forwarded_count": "11",
     "action": "mute",
     "message_type": "greeting",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (11 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0078;message_0077",
     "user_info": {
@@ -3297,7 +3297,7 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "business_update",
-    "reason": "A verified business is sending a legitimate but non-urgent update.",
+    "reason": "Non-urgent account update from verified sender RazorpayX.",
     "confidence": "0.78",
     "evidence_message_ids": "message_0126;message_0125",
     "user_info": {
@@ -3337,8 +3337,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The sender is trusted, but the message has no urgent action or safety relevance.",
-    "confidence": "0.80",
+    "reason": "Casual personal message from contact without urgent action requirement.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0370;message_0229",
     "user_info": {
       "user_id": "u_010",
@@ -3365,7 +3365,7 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "business_update",
-    "reason": "A verified business is sending a legitimate but non-urgent update.",
+    "reason": "Non-urgent account update from verified sender Polaris School of Technology.",
     "confidence": "0.78",
     "evidence_message_ids": "message_0138;message_0137",
     "user_info": {
@@ -3405,7 +3405,7 @@
     "forwarded_count": "8",
     "action": "mute",
     "message_type": "greeting",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (8 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0078;message_0077",
     "user_info": {
@@ -3441,8 +3441,8 @@
     "forwarded_count": "1",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The sender is trusted, but the message has no urgent action or safety relevance.",
-    "confidence": "0.80",
+    "reason": "Casual personal message from contact without urgent action requirement.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0381;message_0238",
     "user_info": {
       "user_id": "u_028",
@@ -3469,8 +3469,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The sender is trusted, but the message has no urgent action or safety relevance.",
-    "confidence": "0.80",
+    "reason": "Casual personal message from contact without urgent action requirement.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0087;message_0184",
     "user_info": {
       "user_id": "u_005",
@@ -3497,7 +3497,7 @@
     "forwarded_count": "7",
     "action": "mute",
     "message_type": "forward",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (7 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0391;message_0389",
     "user_info": {
@@ -3533,7 +3533,7 @@
     "forwarded_count": "9",
     "action": "mute",
     "message_type": "forward",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (9 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0087;message_0184",
     "user_info": {
@@ -3569,8 +3569,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Local Food Finds evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0391;message_0389",
     "user_info": {
       "user_id": "u_040",
@@ -3605,8 +3605,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in Indiranagar Book Club evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0192;message_0191",
     "user_info": {
       "user_id": "u_017",
@@ -3641,7 +3641,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "urgent",
-    "reason": "The message is from a work context and contains a direct deadline or meeting dependency.",
+    "reason": "Urgent workplace dependency in Group Chat requiring immediate attention.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0055;message_0249",
     "user_info": {
@@ -3669,7 +3669,7 @@
     "forwarded_count": "7",
     "action": "mute",
     "message_type": "forward",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (7 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0410;message_0130",
     "user_info": {
@@ -3705,8 +3705,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The sender is trusted, but the message has no urgent action or safety relevance.",
-    "confidence": "0.80",
+    "reason": "Casual personal message from contact without urgent action requirement.",
+    "confidence": "0.8",
     "evidence_message_ids": "none",
     "user_info": {
       "user_id": "u_039",
@@ -3733,7 +3733,7 @@
     "forwarded_count": "11",
     "action": "mute",
     "message_type": "forward",
-    "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores.",
+    "reason": "The sender has a pattern of repeated forwards (11 forwards) or greetings that the user usually ignores.",
     "confidence": "0.85",
     "evidence_message_ids": "message_0410;message_0130",
     "user_info": {
@@ -3769,7 +3769,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "event",
-    "reason": "A school admin sent a same-day operational update that the user is likely to need immediately.",
+    "reason": "Operational notice from International School Parents Group admin requiring quick review.",
     "confidence": "0.87",
     "evidence_message_ids": "message_0255;message_0037",
     "user_info": {
@@ -3805,8 +3805,8 @@
     "forwarded_count": "0",
     "action": "digest",
     "message_type": "personal",
-    "reason": "The message is safe casual chat with no urgent action required.",
-    "confidence": "0.80",
+    "reason": "Standard chat message in International School Parents Group evaluated for digest.",
+    "confidence": "0.8",
     "evidence_message_ids": "message_0217",
     "user_info": {
       "user_id": "u_001",
@@ -3841,7 +3841,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "business_update",
-    "reason": "A verified business is sending an update that matches the user's recent order history.",
+    "reason": "Verified operational update from Amazon India (Order #4821) matching active orders.",
     "confidence": "0.91",
     "evidence_message_ids": "message_0106;message_0105",
     "user_info": {
@@ -3881,7 +3881,7 @@
     "forwarded_count": "0",
     "action": "mute",
     "message_type": "spam",
-    "reason": "The user has opted out of or repeatedly dismissed similar marketing messages.",
+    "reason": "Unsolicited audio marketing from HDFC Bank matching user's dismissal patterns.",
     "confidence": "0.81",
     "evidence_message_ids": "message_0220",
     "user_info": {
@@ -3921,7 +3921,7 @@
     "forwarded_count": "0",
     "action": "notify",
     "message_type": "payment",
-    "reason": "A payment reminder or billing statement from a trusted contact or business.",
+    "reason": "Official payment reminder from Trusted Contact (Deadline: 5 PM) requiring action.",
     "confidence": "0.89",
     "evidence_message_ids": "message_0100;message_0099",
     "user_info": {
