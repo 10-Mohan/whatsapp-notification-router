@@ -50,7 +50,7 @@ def main():
     actions = [r['action'] for r in results]
     types = [r['message_type'] for r in results]
     logger.info(f"Action Distribution: {{'notify': {actions.count('notify')}, 'digest': {actions.count('digest')}, 'mute': {actions.count('mute')}}}")
-    logger.info(f"Message Type Breakdown: {{k: types.count(k) for k in set(types)}}")
+    logger.info(f"Message Type Breakdown: {dict((t, types.count(t)) for t in set(types))}")
 
 if __name__ == "__main__":
     main()
