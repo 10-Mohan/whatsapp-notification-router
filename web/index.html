@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Message Notification Router | HackerRank Orchestrate</title>
+    <meta name="description" content="AI-Powered Multimodal Message Notification Router for WhatsApp. Intelligent routing for text, images, and voice notes.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="brand-text">
+                    <h2>Orchestrate</h2>
+                    <span>Notification Router</span>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <button class="nav-item active" data-tab="dashboard" onclick="switchTab('dashboard')">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard & Analytics</span>
+                </button>
+                <button class="nav-item" data-tab="simulator" onclick="switchTab('simulator')">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>Live Simulator</span>
+                </button>
+                <button class="nav-item" data-tab="messages" onclick="switchTab('messages')">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>Routed Messages (110)</span>
+                </button>
+                <button class="nav-item" data-tab="threats" onclick="switchTab('threats')">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Security & Threat Feed</span>
+                </button>
+                <button class="nav-item" data-tab="architecture" onclick="switchTab('architecture')">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <span>Architecture Flow</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="status-badge online">
+                    <span class="pulse-dot"></span> System Operational
+                </div>
+                <div class="version-tag">HackerRank Orchestrate v1.0</div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="topbar">
+                <div class="header-title">
+                    <h1 id="page-title">Dashboard & Overview</h1>
+                    <p id="page-subtitle">Real-time multimodal WhatsApp notification routing analytics</p>
+                </div>
+                <div class="header-actions">
+                    <div class="benchmark-pill">
+                        <i class="fa-solid fa-bullseye"></i> 93.3% Routing Accuracy
+                    </div>
+                    <button class="btn btn-primary" onclick="switchTab('simulator')">
+                        <i class="fa-solid fa-play"></i> Test Message
+                    </button>
+                </div>
+            </header>
+
+            <!-- TAB 1: DASHBOARD -->
+            <section id="tab-dashboard" class="tab-page active">
+                <!-- Overview Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card card-notify">
+                        <div class="stat-icon"><i class="fa-solid fa-bell"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">NOTIFY (Interrupt Now)</span>
+                            <h3 class="stat-value" id="stat-notify">11</h3>
+                            <span class="stat-desc">Urgent, admin pings, order updates</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card card-digest">
+                        <div class="stat-icon"><i class="fa-solid fa-box-archive"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">DIGEST (Show Later)</span>
+                            <h3 class="stat-value" id="stat-digest">57</h3>
+                            <span class="stat-desc">General group chat, forms, promos</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card card-mute">
+                        <div class="stat-icon"><i class="fa-solid fa-bell-slash"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">MUTE (Suppressed)</span>
+                            <h3 class="stat-value" id="stat-mute">42</h3>
+                            <span class="stat-desc">Spam, scams, repeated forwards</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card card-scams">
+                        <div class="stat-icon"><i class="fa-solid fa-shield-cat"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Threats Blocked</span>
+                            <h3 class="stat-value" id="stat-threats">19</h3>
+                            <span class="stat-desc">Phishing & OTP scams intercepted</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts & Visuals Section -->
+                <div class="grid-2col">
+                    <div class="glass-panel">
+                        <div class="panel-header">
+                            <h3><i class="fa-solid fa-chart-donut"></i> Action Distribution</h3>
+                            <span class="panel-tag">Total: 110 Messages</span>
+                        </div>
+                        <div class="action-bar-container">
+                            <div class="bar-segment bar-notify" style="width: 10%" title="Notify: 10%">10%</div>
+                            <div class="bar-segment bar-digest" style="width: 52%" title="Digest: 52%">52%</div>
+                            <div class="bar-segment bar-mute" style="width: 38%" title="Mute: 38%">38%</div>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item"><span class="dot notify"></span> Notify (11)</div>
+                            <div class="legend-item"><span class="dot digest"></span> Digest (57)</div>
+                            <div class="legend-item"><span class="dot mute"></span> Mute (42)</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel">
+                        <div class="panel-header">
+                            <h3><i class="fa-solid fa-tags"></i> Message Type Breakdown</h3>
+                            <span class="panel-tag">11 Categories</span>
+                        </div>
+                        <div class="category-grid" id="category-grid">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity Feed -->
+                <div class="glass-panel mt-20">
+                    <div class="panel-header">
+                        <h3><i class="fa-solid fa-bolt"></i> Live Stream Preview</h3>
+                        <button class="btn btn-sm" onclick="switchTab('messages')">View All Messages</button>
+                    </div>
+                    <div class="recent-feed" id="recent-feed">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: LIVE SIMULATOR -->
+            <section id="tab-simulator" class="tab-page">
+                <div class="simulator-layout">
+                    <!-- Left: Input Form -->
+                    <div class="glass-panel sim-input-panel">
+                        <div class="panel-header">
+                            <h3><i class="fa-solid fa-pen-to-square"></i> Test Incoming Message</h3>
+                            <button class="btn btn-secondary btn-sm" onclick="loadSamplePreset()">
+                                <i class="fa-solid fa-dice"></i> Load Preset
+                            </button>
+                        </div>
+                        
+                        <form id="sim-form">
+                            <div class="form-group">
+                                <label>Conversation Type</label>
+                                <select id="sim-conv-type" class="form-control">
+                                    <option value="group">Group Chat</option>
+                                    <option value="business">Business Account</option>
+                                    <option value="personal">Personal Direct Message</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Message Content (Text, OCR, or Voice Note Transcript)</label>
+                                <textarea id="sim-text" class="form-control" rows="4" placeholder="Type a WhatsApp message or load sample..."></textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Media Type</label>
+                                    <select id="sim-media-type" class="form-control">
+                                        <option value="">None (Text Only)</option>
+                                        <option value="image">Image / Poster / Screenshot</option>
+                                        <option value="voice">Voice Note (Audio)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Forwarded Count</label>
+                                    <input type="number" id="sim-forwarded" class="form-control" value="0" min="0">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Sender Role</label>
+                                    <select id="sim-sender-role" class="form-control">
+                                        <option value="member">Regular Member</option>
+                                        <option value="admin">Group Admin / Official</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Business Status</label>
+                                    <select id="sim-business-status" class="form-control">
+                                        <option value="verified">Verified Official Business</option>
+                                        <option value="unverified_mismatch">Unverified / Domain Mismatch</option>
+                                        <option value="opted_out">User Opted Out / High Dismissal</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fa-solid fa-microchip"></i> Evaluate Routing Decision
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Live Result Card -->
+                    <div class="glass-panel sim-output-panel">
+                        <div class="panel-header">
+                            <h3><i class="fa-solid fa-square-poll-vertical"></i> AI Router Output</h3>
+                            <span class="live-indicator">Live Evaluator</span>
+                        </div>
+
+                        <div id="sim-result-container" class="sim-result-empty">
+                            <i class="fa-solid fa-wand-magic-sparkles empty-icon"></i>
+                            <p>Submit a message on the left or click "Load Preset" to test the AI router.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 3: ROUTED MESSAGES TABLE -->
+            <section id="tab-messages" class="tab-page">
+                <div class="glass-panel">
+                    <div class="table-controls">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="table-search" placeholder="Search message text, ID, user, or reason...">
+                        </div>
+                        <div class="filter-group">
+                            <select id="filter-action" class="form-control">
+                                <option value="all">All Actions</option>
+                                <option value="notify">Notify</option>
+                                <option value="digest">Digest</option>
+                                <option value="mute">Mute</option>
+                            </select>
+                            <select id="filter-type" class="form-control">
+                                <option value="all">All Message Types</option>
+                                <option value="personal">personal</option>
+                                <option value="urgent">urgent</option>
+                                <option value="event">event</option>
+                                <option value="payment">payment</option>
+                                <option value="business_update">business_update</option>
+                                <option value="promotion">promotion</option>
+                                <option value="greeting">greeting</option>
+                                <option value="forward">forward</option>
+                                <option value="spam">spam</option>
+                                <option value="scam">scam</option>
+                                <option value="unknown">unknown</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>User</th>
+                                    <th>Conv Type</th>
+                                    <th>Action</th>
+                                    <th>Message Type</th>
+                                    <th>Message Text / Multimodal Content</th>
+                                    <th>Reason</th>
+                                    <th>Confidence</th>
+                                    <th>Evidence IDs</th>
+                                </tr>
+                            </thead>
+                            <tbody id="messages-tbody">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 4: THREAT & SECURITY FEED -->
+            <section id="tab-threats" class="tab-page">
+                <div class="threats-overview">
+                    <div class="glass-panel threat-banner">
+                        <div class="banner-icon"><i class="fa-solid fa-shield-virus"></i></div>
+                        <div class="banner-text">
+                            <h3>Security & Scam Interception Engine</h3>
+                            <p>Proactively suppresses phishing domains, credential harvesting, fake support pressure, and prompt injection attacks.</p>
+                        </div>
+                    </div>
+
+                    <div class="threat-cards-grid" id="threat-cards-grid">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 5: ARCHITECTURE FLOW -->
+            <section id="tab-architecture" class="tab-page">
+                <div class="glass-panel arch-panel">
+                    <div class="panel-header">
+                        <h3><i class="fa-solid fa-diagram-project"></i> System Architecture & Pipeline Flow</h3>
+                    </div>
+
+                    <div class="arch-flow">
+                        <div class="arch-step">
+                            <div class="step-num">1</div>
+                            <h4>Multimodal Ingestion</h4>
+                            <p>Processes text, audio voice notes (via Whisper ASR), and image graphics/screenshots (via EasyOCR).</p>
+                        </div>
+                        <div class="arch-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="arch-step">
+                            <div class="step-num">2</div>
+                            <h4>Relational Graph Engine</h4>
+                            <p>Evaluates sender authority, group roles, user quiet hours, business domain age, and reaction history.</p>
+                        </div>
+                        <div class="arch-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="arch-step">
+                            <div class="step-num">3</div>
+                            <h4>Safety & Risk Guard</h4>
+                            <p>Intercepts OTP phishing, credential theft, domain spoofing, and router prompt injection attacks.</p>
+                        </div>
+                        <div class="arch-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="arch-step">
+                            <div class="step-num">4</div>
+                            <h4>Decision Router</h4>
+                            <p>Generates exact contract: action (notify/digest/mute), message_type, reason, confidence, evidence_message_ids.</p>
+                        </div>
+                    </div>
+
+                    <div class="arch-details">
+                        <div class="detail-card">
+                            <h4><i class="fa-solid fa-file-csv"></i> Contract Output Format</h4>
+                            <code>message_id, action, message_type, reason, confidence, evidence_message_ids</code>
+                        </div>
+                        <div class="detail-card">
+                            <h4><i class="fa-solid fa-microchip"></i> Performance Benchmark</h4>
+                            <ul>
+                                <li><strong>Action Accuracy</strong>: 93.33%</li>
+                                <li><strong>Type Accuracy</strong>: 93.33%</li>
+                                <li><strong>Joint Match</strong>: 90.00%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="app.js"></script>
+</body>
+</html>
