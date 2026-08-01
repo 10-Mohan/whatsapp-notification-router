@@ -33,8 +33,8 @@ def package_solution():
                         zipf.write(full_path, arcname)
                         logger.info(f"Added {arcname}")
 
-        # Include root documentation
-        for doc in ["README.md", "problem_statement.md", "AGENTS.md"]:
+        # Include root documentation & manifests
+        for doc in ["README.md", "problem_statement.md", "AGENTS.md", "requirements.txt"]:
             doc_path = os.path.join(root_dir, doc)
             if os.path.exists(doc_path):
                 zipf.write(doc_path, doc)
