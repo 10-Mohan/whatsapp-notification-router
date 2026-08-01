@@ -1,0 +1,10 @@
+# HackerRank Orchestrate - Message Notification Router Dependencies
+pandas>=2.0.0
+numpy>=1.24.0
+torch>=2.0.0
+torchvision>=0.15.0
+openai-whisper>=20231117
+easyocr>=1.7.0
+imageio-ffmpeg>=0.4.8
+scikit-learn>=1.2.0
+Pillow>=9.5.0

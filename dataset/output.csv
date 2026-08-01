@@ -13,7 +13,7 @@ msg_070,mute,scam,The message asks for urgent OTP or account verification throug
 msg_003,notify,business_update,A verified business is sending an update that matches the user's recent order history.,0.91,message_0031;message_0267
 msg_099,digest,personal,"The sender is trusted, but the message has no urgent action or safety relevance.",0.80,message_0055;message_0249
 msg_008,digest,business_update,A verified business is sending a legitimate but non-urgent update.,0.78,message_0072;message_0071
-msg_092,digest,promotion,The message is promotional but matches a topic or business the user has opted into.,0.78,none
+msg_092,notify,payment,A payment reminder or billing statement from a trusted contact or business.,0.89,none
 msg_060,digest,event,"The message is useful group information, but it is not urgent enough to interrupt the user.",0.84,message_0176;message_0404
 msg_004,notify,event,A verified business is sending a reminder that matches the user's recent booking history.,0.91,message_0245;message_0064
 msg_030,mute,promotion,"Similar historical messages were ignored, dismissed, or muted by this user.",0.85,message_0115;message_0232
@@ -24,7 +24,7 @@ msg_071,digest,personal,The message is safe casual chat with no urgent action re
 msg_016,mute,scam,The message uses fake support language and account-blocking pressure to push the user into action.,0.87,message_0087;message_0184
 msg_065,digest,promotion,The message is promotional but matches a topic or business the user has opted into.,0.78,message_0186;message_0185
 msg_038,mute,forward,The sender has a pattern of repeated forwards or greetings that the user usually ignores.,0.85,message_0131;message_0132
-msg_086,digest,business_update,A verified business is sending a legitimate but non-urgent update.,0.78,message_0222
+msg_086,mute,spam,The user has opted out of or repeatedly dismissed similar marketing messages.,0.81,message_0222
 msg_014,mute,promotion,The user has opted out of or repeatedly dismissed similar marketing messages.,0.81,message_0017;message_0084
 msg_094,digest,promotion,The message is promotional but matches a topic or business the user has opted into.,0.78,none
 msg_029,mute,forward,The sender has a pattern of repeated forwards or greetings that the user usually ignores.,0.85,message_0390;message_0332
@@ -62,7 +62,7 @@ msg_037,digest,personal,The message is safe casual chat with no urgent action re
 msg_007,digest,event,"The message is useful group information, but it is not urgent enough to interrupt the user.",0.84,message_0070;message_0069
 msg_085,mute,scam,This sender account shows high risk indicators or unverified domain discrepancy.,0.87,message_0221
 msg_001,notify,urgent,A trusted group admin sent a time-sensitive update that should interrupt the user.,0.89,message_0057;message_0240
-msg_021,digest,personal,The message is safe casual chat with no urgent action required.,0.80,message_0410;message_0130
+msg_021,notify,payment,A payment reminder or billing statement from a trusted contact or business.,0.89,message_0410;message_0130
 msg_028,mute,promotion,The user has opted out of or repeatedly dismissed similar marketing messages.,0.81,message_0034;message_0112
 msg_012,mute,forward,The sender has a pattern of repeated forwards or greetings that the user usually ignores.,0.85,message_0194;message_0193
 msg_064,digest,personal,The message is safe casual chat with no urgent action required.,0.80,message_0087;message_0184
@@ -70,8 +70,8 @@ msg_103,digest,personal,"The sender is trusted, but the message has no urgent ac
 msg_031,digest,personal,The message is safe casual chat with no urgent action required.,0.80,message_0055;message_0249
 msg_057,notify,urgent,The message is from a work context and contains a direct deadline or meeting dependency.,0.85,message_0371;message_0230
 msg_087,digest,personal,The message is safe casual chat with no urgent action required.,0.80,message_0391;message_0389
-msg_067,digest,personal,The message is safe casual chat with no urgent action required.,0.80,message_0410;message_0130
-msg_039,digest,personal,The message is safe casual chat with no urgent action required.,0.80,message_0255;message_0037
+msg_067,notify,payment,A payment reminder or billing statement from a trusted contact or business.,0.89,message_0410;message_0130
+msg_039,digest,payment,A payment reminder or billing statement from a trusted contact or business.,0.82,message_0255;message_0037
 msg_082,digest,personal,The message is safe casual chat with no urgent action required.,0.80,message_0380;message_0218
 msg_066,mute,promotion,The user has opted out of or repeatedly dismissed similar marketing messages.,0.81,message_0188;message_0187
 msg_049,notify,business_update,A verified business is sending an update that matches the user's recent order history.,0.91,message_0153;message_0291
@@ -107,5 +107,5 @@ msg_043,mute,forward,The sender has a pattern of repeated forwards or greetings 
 msg_077,notify,event,A school admin sent a same-day operational update that the user is likely to need immediately.,0.87,message_0255;message_0037
 msg_081,digest,personal,The message is safe casual chat with no urgent action required.,0.80,message_0217
 msg_025,notify,business_update,A verified business is sending an update that matches the user's recent order history.,0.91,message_0106;message_0105
-msg_084,digest,business_update,A verified business is sending a legitimate but non-urgent update.,0.78,message_0220
-msg_022,digest,personal,The message is safe casual chat with no urgent action required.,0.80,message_0100;message_0099
+msg_084,mute,spam,The user has opted out of or repeatedly dismissed similar marketing messages.,0.81,message_0220
+msg_022,notify,payment,A payment reminder or billing statement from a trusted contact or business.,0.89,message_0100;message_0099

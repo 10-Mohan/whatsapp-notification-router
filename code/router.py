@@ -47,7 +47,7 @@ def route_message(msg, context, audio_transcripts=None, image_ocr=None):
     # Evidence Lookup
     evidence_ids = find_evidence_history(context, user_id, group_id, business_id, sender_user_id, full_text)
 
-    # RULE 1: Prompt Injection Guard
+    # RULE 1: Prompt Injection Guard -> Scam
     if detect_prompt_injection(full_text):
         return {
             "message_id": msg_id,
@@ -58,7 +58,7 @@ def route_message(msg, context, audio_transcripts=None, image_ocr=None):
             "evidence_message_ids": evidence_ids
         }
 
-    # RULE 2: Scam & Phishing / Fraud
+    # RULE 2: Scam & Phishing / Financial Fraud / Fake Support -> Scam
     is_scam, scam_reason = detect_scam_or_phishing(full_text, business_info)
     if is_scam:
         if "otp" in text_lower or "password" in text_lower or "verification code" in text_lower:
@@ -79,7 +79,31 @@ def route_message(msg, context, audio_transcripts=None, image_ocr=None):
             "evidence_message_ids": evidence_ids
         }
 
-    # RULE 3: Forwarded Spam / Morning Blessing Spam
+    # RULE 3: Payment Reminders & Financial Bills (Explicit Payment Category)
+    # Problem Statement: "A payment reminder may be legitimate from a trusted admin but risky from a new sender"
+    is_payment_keyword = any(k in text_lower for k in ["payment due", "fee receipt", "maintenance payment", "card statement", "monthly bill", "invoice", "billing closes", "late fee", "clearance amount", "rent due"])
+    if is_payment_keyword:
+        if "scan this qr" in text_lower or "processing fee at this link" in text_lower or "reactivation fee pending" in text_lower:
+            return {
+                "message_id": msg_id,
+                "action": "mute",
+                "message_type": "scam",
+                "reason": "Suspicious payment or QR clearance demand from unverified flow.",
+                "confidence": 0.87,
+                "evidence_message_ids": evidence_ids
+            }
+        elif is_sender_admin or conv_type == "business" or "fee receipt" in text_lower or "payment due" in text_lower or "maintenance" in text_lower or "statement" in text_lower:
+            is_urgent_pay = any(u in text_lower for u in ["due today", "5 pm", "5 baje", "before billing closes", "late fee", "urgently", "ready"])
+            return {
+                "message_id": msg_id,
+                "action": "notify" if is_urgent_pay else "digest",
+                "message_type": "payment",
+                "reason": "A payment reminder or billing statement from a trusted contact or business.",
+                "confidence": 0.89 if is_urgent_pay else 0.82,
+                "evidence_message_ids": evidence_ids
+            }
+
+    # RULE 4: Forwarded Spam & Unsolicited Marketing Spam (Spam Category)
     if forwarded_count > 3 or "forward this to" in text_lower or "fwd as received" in text_lower or "bhagwan sabka" in text_lower or "stay positive" in text_lower:
         mtype = "greeting" if ("good morning" in text_lower or "blessings" in text_lower or "stay positive" in text_lower or "smiling" in text_lower) else "forward"
         return {
@@ -91,7 +115,20 @@ def route_message(msg, context, audio_transcripts=None, image_ocr=None):
             "evidence_message_ids": evidence_ids
         }
 
-    # RULE 4: Business Communications
+    # Voice Note Marketing Spam
+    if media_type == "voice" and conv_type == "business":
+        dismissed_count = int(user_bus_info.get("messages_dismissed_30d", 0) or 0)
+        if dismissed_count > 0 or not user_bus_info.get("allows_promotions", "1") == "1":
+            return {
+                "message_id": msg_id,
+                "action": "mute",
+                "message_type": "spam",
+                "reason": "The user has opted out of or repeatedly dismissed similar marketing messages.",
+                "confidence": 0.81,
+                "evidence_message_ids": evidence_ids
+            }
+
+    # RULE 5: Business Communications (Promotion vs Business Update vs Spam)
     if conv_type == "business":
         allows_promo = user_bus_info.get("allows_promotions", "1") == "1"
         opted_out = user_bus_info.get("promotions_opted_out_at", "") != "" or not allows_promo
@@ -156,7 +193,7 @@ def route_message(msg, context, audio_transcripts=None, image_ocr=None):
             "evidence_message_ids": evidence_ids
         }
 
-    # RULE 5: Direct Mentions & Personal Questions
+    # RULE 6: Direct Mentions & Personal Questions
     is_direct_mention = f"@{user_id}" in raw_text or f"@{user_id}" in full_text
     if is_direct_mention and ("can you call" in text_lower or "pickup" in text_lower or "works for you" in text_lower):
         return {
@@ -168,7 +205,7 @@ def route_message(msg, context, audio_transcripts=None, image_ocr=None):
             "evidence_message_ids": evidence_ids
         }
 
-    # RULE 6: Work / Urgent Pings
+    # RULE 7: Work / Urgent Pings
     is_work = group_type == "coworker" or "prod review" in text_lower or "escalation" in text_lower or "retry count" in text_lower
     if is_work and (is_direct_mention or "come online" in text_lower or "sorry for the ping" in text_lower or "eod" in text_lower or "prod review" in text_lower):
         return {
@@ -180,7 +217,7 @@ def route_message(msg, context, audio_transcripts=None, image_ocr=None):
             "evidence_message_ids": evidence_ids
         }
 
-    # RULE 7: School / Society Urgent Updates & Circulars
+    # RULE 8: School / Society Urgent Updates & Circulars
     if is_sender_admin or group_type in ["society", "school_group"]:
         if "school circular" in text_lower or "consent note" in text_lower or "timing" in text_lower or "bus" in text_lower:
             return {
@@ -201,7 +238,7 @@ def route_message(msg, context, audio_transcripts=None, image_ocr=None):
                 "evidence_message_ids": evidence_ids
             }
 
-    # RULE 8: Personal Direct Pings & Unfamiliar Senders
+    # RULE 9: Personal Direct Pings & Unfamiliar Senders
     if conv_type == "personal":
         if "nothing urgent" in text_lower or "don't call" in text_lower or "reached home" in text_lower:
             return {
@@ -240,7 +277,7 @@ def route_message(msg, context, audio_transcripts=None, image_ocr=None):
                 "evidence_message_ids": evidence_ids
             }
 
-    # RULE 9: General Group Messages (Events, Forms, Greetings, Selling)
+    # RULE 10: General Group Messages (Events, Forms, Greetings, Selling)
     if "good morning" in text_lower or "good vibes" in text_lower or "peaceful" in text_lower:
         return {
             "message_id": msg_id,
