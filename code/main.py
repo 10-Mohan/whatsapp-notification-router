@@ -1,9 +1,17 @@
 import os
 import csv
 import logging
+import sys
+
+# Ensure code/ is on path
+code_dir = os.path.dirname(os.path.abspath(__file__))
+if code_dir not in sys.path:
+    sys.path.insert(0, code_dir)
+
 from features import ContextData
 from multimodal import get_audio_transcripts, get_image_ocr
 from router import route_message
+from hybrid_router import hybrid_route_message
 from batching import compute_message_batches
 
 logging.basicConfig(level=logging.INFO)
@@ -30,11 +38,11 @@ def main():
     # Claim temporal batching differentiator
     batch_info = compute_message_batches(messages, time_window_minutes=30)
 
-    logger.info(f"Processing {len(messages)} incoming messages with temporal burst batching...")
+    logger.info(f"Processing {len(messages)} incoming messages with hybrid router engine...")
     results = []
     
     for msg in messages:
-        res = route_message(msg, context, audio_transcripts, image_ocr, batch_info)
+        res = hybrid_route_message(msg, context, audio_transcripts, image_ocr, batch_info)
         results.append(res)
 
     output_path = os.path.join(dataset_dir, "output.csv")

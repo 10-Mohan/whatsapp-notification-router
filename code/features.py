@@ -166,19 +166,47 @@ def detect_scam_or_phishing(text, business_info=None):
     return False, None
 
 
+_STOPWORDS = {
+    "the", "a", "an", "is", "are", "was", "were", "to", "for", "of", "and",
+    "in", "on", "at", "your", "you", "please", "with", "this", "that", "it",
+    "has", "have", "will", "be", "we", "our", "from", "by", "as", "or",
+}
+
+
+def _significant_words(text):
+    return {
+        w for w in "".join(c if c.isalnum() else " " for c in text.lower()).split()
+        if len(w) > 2 and w not in _STOPWORDS
+    }
+
+
 def find_evidence_history(context, user_id, group_id, business_id, sender_user_id, message_text):
+    """Structural filter (same user + same sender/business/group) narrows the
+    candidate pool, then content overlap with `message_text` ranks *within*
+    that pool so evidence is topically relevant, not just the most recent
+    thing that sender happened to send. Falls back to pure recency only when
+    there's no text to compare (previous behavior), so this never regresses
+    the structural cases that already worked."""
     matched_ids = []
     for msg_id, msg in context.message_history.items():
         if msg.get("user_id") == user_id:
             same_business = business_id and msg.get("business_id") == business_id
             same_group = group_id and msg.get("group_id") == group_id
             same_sender = sender_user_id and msg.get("sender_user_id") == sender_user_id
-            
+
             if same_business or same_sender or (same_group and sender_user_id and msg.get("sender_user_id") == sender_user_id):
                 matched_ids.append(msg_id)
-                
+
     if not matched_ids:
         return "none"
-        
-    matched_ids.sort(key=lambda x: context.message_history[x].get("created_at", ""), reverse=True)
+
+    query_words = _significant_words(message_text or "")
+
+    def score(msg_id):
+        hist_text = context.message_history[msg_id].get("message_text", "") or ""
+        overlap = len(query_words & _significant_words(hist_text))
+        created_at = context.message_history[msg_id].get("created_at", "")
+        return (overlap, created_at)  # overlap first, recency as tiebreaker
+
+    matched_ids.sort(key=score, reverse=True)
     return ";".join(matched_ids[:2])
