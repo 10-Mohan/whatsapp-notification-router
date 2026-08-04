@@ -703,3 +703,24 @@ repo_root=d:\\Whatsapp notification
 worktree=main
 parent_agent=none
 
+## 2026-08-04T21:29:45+05:30 Fix Web Dashboard tab switching, add window.switchTab binding and CSS display rules
+
+User Prompt: These tabs aren't working
+
+Agent Response Summary:
+Fixed Web Dashboard sidebar tab switching across index.html, styles.css, and app.js. Bound switchTab directly to window.switchTab for cross-browser inline onclick compatibility, added null checks for title elements, strengthened CSS .tab-page display rules with !important overrides, re-built code.zip, and pushed commit 6682357 to GitHub.
+
+Actions:
+* Updated web/styles.css and styles.css.
+* Updated build_web_js.py, web/app.js, and app.js.
+* Re-packaged code.zip.
+* Pushed commit 6682357 to GitHub.
+* Appended turn entry to log.txt.
+
+Context:
+tool=Antigravity
+branch=main
+repo_root=d:\\Whatsapp notification
+worktree=main
+parent_agent=none
+

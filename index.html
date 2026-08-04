@@ -12,7 +12,43 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1.2">
+    <script>
+        function switchTab(tabId) {
+            console.log('Switching tab to:', tabId);
+            var navs = document.querySelectorAll('.nav-item');
+            for (var i = 0; i < navs.length; i++) {
+                navs[i].classList.remove('active');
+                if (navs[i].getAttribute('data-tab') === tabId) {
+                    navs[i].classList.add('active');
+                }
+            }
+            var pages = document.querySelectorAll('.tab-page');
+            for (var j = 0; j < pages.length; j++) {
+                pages[j].classList.remove('active');
+                pages[j].style.setProperty('display', 'none', 'important');
+            }
+            var targetPage = document.getElementById('tab-' + tabId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+                targetPage.style.setProperty('display', 'block', 'important');
+            }
+            var titleMap = {
+                'dashboard': ['Dashboard & Overview', 'Real-time multimodal WhatsApp notification routing analytics'],
+                'simulator': ['Live AI Router Simulator', 'Test custom messages, voice notes, and image OCR pings in real time'],
+                'messages': ['Routed Messages Explorer', 'Filter and inspect predictions for all 110 incoming dataset messages'],
+                'threats': ['Security & Threat Feed', 'Proactive interception log for phishing, OTP scams, and prompt injection'],
+                'architecture': ['System Architecture', 'Pipeline flow, feature extraction, and benchmark contract metrics']
+            };
+            var titleEl = document.getElementById('page-title');
+            var subtitleEl = document.getElementById('page-subtitle');
+            if (titleMap[tabId]) {
+                if (titleEl) titleEl.textContent = titleMap[tabId][0];
+                if (subtitleEl) subtitleEl.textContent = titleMap[tabId][1];
+            }
+        }
+        window.switchTab = switchTab;
+    </script>
 </head>
 <body>
     <div class="app-container">
@@ -366,6 +402,6 @@
     </div>
 
     <!-- Custom Script -->
-    <script src="app.js"></script>
+    <script src="app.js?v=1.2"></script>
 </body>
 </html>
