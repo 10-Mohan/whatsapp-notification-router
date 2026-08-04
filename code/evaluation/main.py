@@ -44,10 +44,21 @@ def evidence_jaccard(expected_str, predicted_str):
     union = e | p
     return len(e & p) / len(union) if union else 1.0
 
+def load_env():
+    for env_path in [os.path.join(code_dir, ".env"), os.path.join(os.path.dirname(code_dir), ".env")]:
+        if os.path.exists(env_path):
+            with open(env_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        os.environ.setdefault(k.strip(), v.strip())
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("evaluator")
 
 def evaluate():
+    load_env()
     root_dir = os.path.dirname(code_dir)
     dataset_dir = os.path.join(root_dir, "dataset")
     sample_path = os.path.join(dataset_dir, "sample_messages.csv")

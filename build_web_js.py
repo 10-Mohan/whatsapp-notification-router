@@ -3990,11 +3990,14 @@ function switchTab(tabId) {
         'architecture': ['System Architecture', 'Pipeline flow, feature extraction, and benchmark contract metrics']
     };
 
+    const titleEl = document.getElementById('page-title');
+    const subtitleEl = document.getElementById('page-subtitle');
     if (titleMap[tabId]) {
-        document.getElementById('page-title').textContent = titleMap[tabId][0];
-        document.getElementById('page-subtitle').textContent = titleMap[tabId][1];
+        if (titleEl) titleEl.textContent = titleMap[tabId][0];
+        if (subtitleEl) subtitleEl.textContent = titleMap[tabId][1];
     }
 }
+window.switchTab = switchTab;
 
 // Load dataset JSON
 async function loadData() {
